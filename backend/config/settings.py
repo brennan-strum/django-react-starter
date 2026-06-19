@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-4u__*6*9u=d^a8mv6d!aj7^!+3%(qpu@*dh!tv99y*4(1@9*&5
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', '.csb.app']
 
 
 # Application definition
@@ -142,4 +142,9 @@ REST_FRAMEWORK = {
 CORS_ALLOWED_ORIGINS = [
     'http://localhost:5173',
     'http://127.0.0.1:5173',
+]
+
+# CodeSandbox serves the frontend on a dynamic https://<id>-5173.csb.app origin.
+CORS_ALLOWED_ORIGIN_REGEXES = [
+    r'^https://.*\.csb\.app$',
 ]
