@@ -1,5 +1,5 @@
 // Tiny wrapper around the Django REST API.
-const BASE = "http://127.0.0.1:8000/api";
+const BASE = "https://6mj7gj-8000.csb.app/api";
 
 export async function listQuotes() {
   const res = await fetch(`${BASE}/quotes/`);
